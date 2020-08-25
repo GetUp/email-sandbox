@@ -13,7 +13,7 @@ function server (done) {
 
 gulp.task('include', function () {
   return gulp
-    .src(['src/index.html', 'src/email.html'])
+    .src(['index.html', 'email.html'])
     .pipe(
       fileinclude({
         prefix: '@@',
