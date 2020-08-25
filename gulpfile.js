@@ -1,34 +1,19 @@
-const include = require('gulp-file-include')
+const fileinclude = require('gulp-file-include')
 const gulp = require('gulp')
-const browserSync = require('browser-sync')
+const browser = require('browser-sync')
+const del = require('del')
 
-gulp.task('watch', function () {
-  //Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
-  gulp.watch('src/**/*.html', gulp.parallel('html'))
-})
+// Start a server with LiveReload to preview the site in
+function server (done) {
+  browser.init({
+    server: 'output'
+  })
+  done()
+}
 
-gulp.task('html', function () {
-  //собираем html из кусочков
+gulp.task('include', function () {
   return gulp
     .src(['src/index.html', 'src/email.html'])
-    .pipe(
-      include({
-        //импортируем файлы с префиксом @@. ПРефикс можно настроить под себя.
-        prefix: '@@',
-        basepath: '@file'
-      })
-    )
-    .pipe(gulp.dest('output/'))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    )
-})
-
-gulp.task('fileinclude', function () {
-  return gulp
-    .src(['index.html'])
     .pipe(
       fileinclude({
         prefix: '@@',
@@ -36,6 +21,27 @@ gulp.task('fileinclude', function () {
       })
     )
     .pipe(gulp.dest('./output'))
+    .pipe(
+      browser.reload({
+        stream: true
+      })
+    )
 })
 
-gulp.task('default', gulp.parallel('watch'))
+function clean () {
+  return del('output')
+}
+
+function cleanFile () {
+  return del('./output/email.html', '!./output/', '!./output/index.html')
+}
+
+gulp.task('watch', function () {
+  gulp
+    .watch('src/**/*.html')
+    .on('all', gulp.series('include', cleanFile, browser.reload))
+})
+
+gulp.task('build', gulp.series(clean, 'include', cleanFile, 'watch'))
+
+gulp.task('default', gulp.parallel('build', server, 'watch'))
