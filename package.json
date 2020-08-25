@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,10 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.2.2",
-    "node": "^14.8.0"
+    "node": "^14.8.0",
+    "posthtml-include": "^1.4.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
   }
 }
