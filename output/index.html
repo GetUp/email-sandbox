@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Single Column with Tables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      } /* GMAIL BLUE LINKS */
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      } /* SAMSUNG MAIL BLUE LINKS */
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* Universal styles for links and stuff */
+      a {
+        color: #2080ff !important;
+        text-decoration: underline !important;
+      }
+      a:hover {
+        color: #0057c8;
+        text-decoration: none !important;
+      }
+      a.button:hover {
+        background-color: #0057c8 !important;
+      }
+      td {
+        font-family: 'Helvetica', 'Arial', sans-serif !important;
+      }
+      p {
+        margin: 0 0 16px 0;
+      }
+      .references {
+        padding: 16px 0;
+      }
+      .references p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0;
+        margin: 0;
+      }
+      .references ol {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+      }
+      .callout p {
+        margin-bottom: 0 !important;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .mobile {
+          width: 100% !important;
+          font-size: 17px !important;
+          line-height: 24px !important;
+        }
+        .mobile.logo {
+          background: #ffffff !important;
+        }
+      }
+
+      /* Dark mode */
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        .fluid-container,
+        .mobile.logo {
+          background: #1c1c1f !important;
+        }
+        .mobile {
+          background: #2c2d2f !important;
+        }
+        .mobile.footer {
+          background: #1c1c1f !important;
+        }
+        .callout {
+          background: #1c1c1f !important;
+        }
+        p,
+        li {
+          color: #f2f2f7 !important;
+        }
+        a {
+          color: #4b9aff !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="body" style="margin: 0 !important; padding: 0 !important;">
+    <!-- Preview text for the inbox -->
+    <div style="display: none; max-height: 0; overflow: hidden;">This will be displayed underneath the subject line. Use it wisely.</div>
+    <table class="fluid-container" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="background-color: #f1f3f5;">
+      <!-- Logo image -->
+      <tr>
+        <td align="center">
+          <table border="0" class="mobile logo" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color: #f1f3f5; margin: 0; padding: 0;">
+            <tr>
+              <td align="center" class="wrapper" style="padding: 16px;">
+                <img src="http://cdn.getup.org.au/image_20916_full.png" alt="" width="90" border="0" style="display: block; margin-left: auto; margin-right: 0;" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table border="0" class="mobile" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color: #ffffff; color: #000000; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 19px; line-height: 30px; margin: 0; padding: 0; border-radius: 4px;">
+            <tr>
+              <td class="wrapper" style="padding: 16px;">
+                <div class="callout" style="background-color: #f1f3f5; border-radius: 4px; padding: 16px; margin-bottom: 16px;">
+  <p>
+    Niren, you may not have heard from us in a while! A database error meant a bunch of members haven't been receiving our usual emails. It's all fixed now, but we're so sorry!
+    <a href="http://www.getup.org.au/2020-monthly-survey">Here's a video of Big Ted talking about ABC funding cuts in our cheeky new video to make up for it!</a>
+  </p>
+</div>
+
+<p>{NAME|Friend},</p>
+<p>Even Big Ted thinks 2020 has been huge for the ABC.</p>
+<p>Local and national reporters worked tirelessly for months as bushfires raged across the country.<sup>1</sup> The ABC stepped in to help kids learn during lockdown.<sup>2</sup> And then of course came the cuts...staff losing jobs and programmes axed or reduced.<sup>3</sup></p>
+<p>But GetUp members have been there keeping up the drumbeat and ensuring that the protection of the ABC remains on the national agenda.</p>
+<p>Because we know one thing for sure: if everyone who relied on the ABC stood up for it, its enemies wouldn't have a leg to stand on.</p>
+<p>
+  And who better to rally community support than Big Ted? Recently, GetUp staff member Chandi met with the PlaySchool legend to chat about the fate of the ABC.
+</p>
+<p>
+  <strong>
+    <a href="http://www.getup.org.au/2020-monthly-survey">
+      Watch the video and share it with at least five people to keep up the pressure to protect our ABC.
+    </a>
+  </strong>
+</p>
+
+<table border="0" cellspacing="0" cellpadding="0" role="presentation" style="margin: 16px 0;">
+  <tr>
+    <td bgcolor="#ff671f" style="padding: 12px 18px 12px 18px; margin: 10px 0;" align="left">
+      <a href="http://thebetter.email" target="_blank" style="font-size: 19px; font-family: sans-serif; font-weight: bold; color: #ffffff !important; text-decoration: none !important; display: inline-block;">
+        Watch and share! ❯
+      </a>
+    </td>
+  </tr>
+</table>
+
+<a href="http://www.getup.org.au/2020-monthly-survey">
+  <img src="http://cdn.getup.org.au/image_20993_full.png" alt="Some descriptive alternative text" width="600" border="0" style="border-radius: 0px; display: block; max-width: 100%; min-width: 100px; width: 100%; margin: 16px 0;" />
+</a>
+
+<p>Why share it with friends and family? Because we know the coming months won't be easy for the ABC.</p>
+<p>
+  With the threat of more cuts looming in the October budget, a hostile report commissioned by Morrison,4 and the Murdoch Press levelling more malicious attacks on our public broadcaster, GetUp members are working tirelessly to convince politicians on both sides of Parliament to protect our ABC from further cuts.
+</p>
+<p>
+  But to have the best chance at saving our National Broadcaster we need as many of our like-minded neighbours, friends and family members to get on board.
+</p>
+
+<div class="callout" style="background-color: #f1f3f5; border-radius: 4px; padding: 16px; margin-bottom: 16px;">
+  <p>
+    <strong>
+      <a href="http://www.getup.org.au/2020-monthly-survey">
+        Tosca, can you watch the short video and share it to help boost the campaign?
+      </a>
+    </strong>
+  </p>
+
+  <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="margin: 16px 0; margin-bottom: 0;">
+    <tr>
+      <td bgcolor="#ff671f" style="padding: 12px 18px 12px 18px;" align="left">
+        <a href="http://thebetter.email" target="_blank" style="font-size: 19px; font-family: sans-serif; font-weight: bold; color: #ffffff !important; text-decoration: none !important; display: inline-block;">
+          Watch and share! ❯
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<ul>
+  <li><a href="https://guardian.com">'Australians say ABC saved lives during summer bushfires, royal commission told'</a>, The Guardian, 2 June 2020</li>
+  <li><a href="https://guardian.com">'ABC to offer curriculum-based education content for students from next term'</a>, Mumbrella, 2 April 2020</li>
+  <li>'ABC to cut 250 jobs, dump 7.45am radio news bulletin and axe ABC Life brand', The Guardian, 24 June 2020</li>
+  <li>'Exclusive: New govt report targets ABC', The Saturday Paper, 27 June 2020</li>
+</ul>
+
+<p>
+  In solidarity,<br />
+  Alix, Sarah, Tosca and Bea - for the GetUp team.
+</p>
+<p>
+  <em>
+    P.S. In case you missed it, check out the email below showing all the amazing work GetUp members did for our ABC in the July Eden-Monaro by-election.
+  </em>
+</p>
+<div class="references">
+  <p>References:</p>
+  <ol>
+    <li><a href="https://guardian.com">'Australians say ABC saved lives during summer bushfires, royal commission told'</a>, The Guardian, 2 June 2020</li>
+    <li><a href="https://guardian.com">'ABC to offer curriculum-based education content for students from next term'</a>, Mumbrella, 2 April 2020</li>
+    <li>'ABC to cut 250 jobs, dump 7.45am radio news bulletin and axe ABC Life brand', The Guardian, 24 June 2020</li>
+    <li>'Exclusive: New govt report targets ABC', The Saturday Paper, 27 June 2020</li>
+  </ol>
+</div>
+
+              </td>
+            </tr>
+          </table>
+          <!-- Footer -->
+          <table border="0" class="mobile footer" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color: #f1f3f5; margin: 0; padding: 0;">
+            <tr>
+              <td style="color: #777777; font-size: 14px; line-height: 22px; margin: 60px 0 0 0; padding: 32px 16px;">
+                <p style="margin: 0 0 16px 0;">
+                  GetUp is an independent, not-for-profit community campaigning group. We use new technology to empower Australians to have their say on important national issues. We receive no political party or government funding, and every campaign we run is entirely supported by voluntary donations. If you'd like to contribute to help fund GetUp's work, please
+                  <a href="https://getup.org.au/power-australia-forward">donate now</a>! Please note we've updated our <a href="https://getup.org.au/about/privacy-policy">privacy policy</a>. If you do not wish to receive updates to {EMAIL|NOT_AVAILABLE} from GetUp, please <a href="https://getup.org.au/unsubscribe">unsubscribe</a>.
+                </p>
+                <p style="margin: 0 0 16px 0;">
+                  Our team acknowledges the Traditional Custodians of the land on which we meet and work. We wish to pay respect to Elders - past, present and emerging - and acknowledge the important role all Aboriginal and Torres Strait Islander people continue to play within Australia and the GetUp community.
+                </p>
+                <p>Authorised by Paul Oosting, GetUp, Sydney</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
