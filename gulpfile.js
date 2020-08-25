@@ -6,21 +6,21 @@ const del = require('del')
 // Start a server with LiveReload to preview the site in
 function server (done) {
   browser.init({
-    server: 'output'
+    server: './'
   })
   done()
 }
 
 gulp.task('include', function () {
   return gulp
-    .src(['index.html', 'email.html'])
+    .src(['src/index.html', 'src/email.html'])
     .pipe(
       fileinclude({
         prefix: '@@',
         basepath: '@file'
       })
     )
-    .pipe(gulp.dest('./output'))
+    .pipe(gulp.dest('./'))
     .pipe(
       browser.reload({
         stream: true
@@ -29,16 +29,16 @@ gulp.task('include', function () {
 })
 
 function clean () {
-  return del('output')
+  return del('./*.html')
 }
 
 function cleanFile () {
-  return del('./output/email.html', '!./output/', '!./output/index.html')
+  return del('./email.html')
 }
 
 gulp.task('watch', function () {
   gulp
-    .watch('src/**/*.html')
+    .watch('src/email.html')
     .on('all', gulp.series('include', cleanFile, browser.reload))
 })
 
